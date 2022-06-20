@@ -1,0 +1,28 @@
+#header
+{
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+}
+
+#header_button
+{
+    color: white;
+    background-color: blue;
+    text-transform: uppercase;
+    letter-spacing: 1.1ch;
+    padding: 10px;
+}
+#test{
+    content: "f291";
+    width: 100px;
+}
+#header-icons{
+    width: 48px;
+    height: 48px;
+}
+.icon::before{
+    content: 'f291';
+    width: 22px;
+    height: 22px;
+}
