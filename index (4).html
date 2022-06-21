@@ -7,24 +7,61 @@
 </head>
 
 <body>
-    <div id="header">
-        <div>
-            <!-- LOGO-->
-        </div>
-        <div>
-            <!-- LOGO-->
-        </div>
-        <div>
-            <a id = "header-icons" class="fa-solid fa-user" href="#" type="button"></a>
-            <i id = "header-icons" class="fa-solid fa-magnifying-glass"></i>
-            <i id = "header-icons" class="fa-solid fa-basket-shopping"></i>
-            <span class="test"></span>
-        </div>
-        <div></div>
-        <div>
+    <header>
+        <!--
+            Barra de navegação do site
+        -->
+        <nav>
+            <div id="logo-header">
+                <img src="logo.png" class="logo-img">
+                <a class="logo-title" href="/">Smoker King</a>
+            </div>
+            <ul class="header-list"> 
+                <li><a href = "#" class="header-icon"><i  class="fa-solid fa-user"></i></a></li>
+                <li><a href = "#" class="header-icon"><i  class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href = "#" class="header-icon"><i  class="fa-solid fa-basket-shopping"></i></a></li>
+                <li><a href = "#" class="header-icon"><i  class="fa-solid fa-location-dot"></i></a></li>
+            </ul>
             <input id="header_button" type="button" value="Smooker">
+        </nav>
+    </header>
+    <div id = "banner">
+        <div class="banner_radius">
+            <input type="radio" name="radioBt" id="radio1">
+            <input type="radio" name="radioBt" id="radio2">
+            <input type="radio" name="radioBt" id="radio3">
+            <input type="radio" name="radioBt" id="radio4">
+            <!--
+                Slides Img
+            -->
+            <div class="slide first">
+                <img src="https://4.bp.blogspot.com/-1RDZFfahA70/XL8W9ukKSwI/AAAAAAAAF6A/jPLrE5L1ReUKd4yQ3IWCAqQZi9Horgt-wCLcBGAs/s1600/42499268_282583269277301_18385861910564252_n.jpg">
+            </div>
+            <div class="slide">
+                <img src="https://c4.wallpaperflare.com/wallpaper/327/260/967/shisha-variation-wallpaper-preview.jpg">
+            </div>
+            <div class="slide">
+                <img src="https://4.bp.blogspot.com/-1RDZFfahA70/XL8W9ukKSwI/AAAAAAAAF6A/jPLrE5L1ReUKd4yQ3IWCAqQZi9Horgt-wCLcBGAs/s1600/42499268_282583269277301_18385861910564252_n.jpg">
+            </div>
+            <div class="slide">
+                <img src="https://4.bp.blogspot.com/-1RDZFfahA70/XL8W9ukKSwI/AAAAAAAAF6A/jPLrE5L1ReUKd4yQ3IWCAqQZi9Horgt-wCLcBGAs/s1600/42499268_282583269277301_18385861910564252_n.jpg">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+        <div class="manual_navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
