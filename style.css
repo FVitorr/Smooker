@@ -54,6 +54,27 @@ nav li {
     letter-spacing: 3px;
     margin-left: 32px;
 }
+.search{
+    background-color: #23232e;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+}
+.search-text{
+    background: none;
+    border: none;
+    width: 0;
+    padding-left: 12px;
+}
+.search:hover .search-text{
+    width: 100px;
+    
+}
+.search:hover{
+    border: 1px #bbbbbb solid;
+    border-radius: 12px;
+    background-color: #bbbbbb;
+}
 
 #header_button{
     width: 120px;
@@ -71,26 +92,31 @@ nav li {
     width: 32px;
     height: 2px;
     background-color: #fff;
-    margin: 8px;
+    margin-bottom: 5px;
 }
 @media (max-width:999px){
+    body {
+        overflow-x: hidden;
+    }
     .header-list{
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 50vw;
+        width: 250px;
         height: 92vh;
         background-color: #23232e;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;  
+        /*transform: translateX(100%);*/
     }
     #header_button{
+        width: 0;
         display: none;
     }
     .header-list li{
         margin-left: 0;
-        opacity: 0;
+        opacity: 1;
     }
     .slide {
         z-index: -1;
@@ -102,6 +128,10 @@ nav li {
         display: block;
     }
 }
+/*
+.header-list.active{
+    transform: translate(0);
+}*/
 /*Estilizaçao do bannr imagens*/
 #banner{
     /*position: absolute;*/
@@ -306,6 +336,28 @@ nav li {
         width: 270px;
         margin: 10px 0;
     }
+    .mobile-footer{
+        display: none;
+    }
+}
+/*Estilização do mapa*/
+#map{
+    height: 310px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#map h6{
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 10px auto;}
+.map{
+    height: 90%;
+    width: 80%;
+    margin-bottom: 10px;
 }
 /*Estilização do footer*/
 .footer{
