@@ -28,8 +28,8 @@ function createImg(attribute,value){
     return div;
 }
 let valuer = 25.00
+let div_conteiner = createDiv('class',"container");
 function createProdut(urlImg,description,valuer,checked=''){
-    let div_conteiner = createDiv('class',"container");
     let div_product_emphasis = createDiv('class',"product_emphasis");
     let img = createImg("src",urlImg);
     let p = document.createElement("p");
@@ -46,7 +46,7 @@ function createProdut(urlImg,description,valuer,checked=''){
     }
     let spam = document.createElement("spam");
     spam.setAttribute("class","qtd_aval");
-    spam.innerHTML="(1000)"
+    spam.innerHTML="(1000 votes)"
     
     let button = document.createElement("button");
     button.setAttribute("class","btn");
@@ -56,9 +56,18 @@ function createProdut(urlImg,description,valuer,checked=''){
     for (let j = 0; j < emphasis.length ;j++){
         div_product_emphasis.appendChild(emphasis[j]);
     }
+    return div_product_emphasis;
+}
+function layout_emphasis (urlImg,description,valuer,checked=''){
+    let div_product_emphasis = createProdut(urlImg,description,valuer,checked='')
     div_conteiner.appendChild(div_product_emphasis);
     father.appendChild(div_conteiner);
 }
-createProdut('https://t4.ftcdn.net/jpg/02/57/72/69/360_F_257726951_n0gIjSVw93lpvdH8UJDooMltieeSXfcB.jpg',
-'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-valuer,'checked');
+for (let i =0 ; i < 4;i++){
+    layout_emphasis('https://t4.ftcdn.net/jpg/02/57/72/69/360_F_257726951_n0gIjSVw93lpvdH8UJDooMltieeSXfcB.jpg',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    valuer,'checked');
+}
+
+
+
