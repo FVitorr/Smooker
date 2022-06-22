@@ -27,7 +27,7 @@ function createImg(attribute,value){
     div.setAttribute(attribute,value);
     return div;
 }
-let valuer = 25.00
+let valuer = 25.00;
 function createProdut(urlImg,description,valuer,checked = 0,votes="(0 Avaliação)"){
     let div_product_emphasis = createDiv('class',"product_emphasis");
     let img = createImg("src",urlImg);

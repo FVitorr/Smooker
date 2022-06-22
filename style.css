@@ -251,6 +251,16 @@ nav li {
     flex-wrap: wrap;
     margin: 20px auto;
 }
+.container_ input{
+    display: none;
+}
+.container_{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 380px;
+    transform-style: preserve-3d;
+}
 .container .product_emphasis{
     padding: 10px 0 0 0;
     width: 20%;
@@ -263,6 +273,8 @@ nav li {
     text-align: center;
     cursor: pointer;
     box-shadow: 0 14px 28px #23232e,0 10px 20px #23232e;
+    object-fit: cover;
+    position: relative;
 }
 .container .product_emphasis:hover{
     padding: 3px;
