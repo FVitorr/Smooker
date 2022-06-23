@@ -39,6 +39,7 @@ nav a:hover{
 }
 
 nav{
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -109,6 +110,7 @@ nav li {
         align-items: center;
         justify-content: space-around;  
         /*transform: translateX(100%);*/
+        z-index: 1;
     }
     #header_button{
         width: 0;
@@ -132,7 +134,7 @@ nav li {
 .header-list.active{
     transform: translate(0);
 }*/
-/*Estilizaçao do bannr imagens*/
+/*Estilizaçao do banner imagens*/
 #banner{
     /*position: absolute;*/
     border-top: 2px solid #23232e;
@@ -143,7 +145,7 @@ nav li {
     margin-left: auto;
     overflow: hidden;
     height: 400px ;
-    width: 1200px;
+    width: 78%;
 }
 
 .banner_radius{
@@ -351,6 +353,37 @@ nav li {
     .mobile-footer{
         display: none;
     }
+}
+/*Carrinho de compra*/
+#cart_shopping{
+    position: fixed;
+    top: 100px;
+    right: 36px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 4px;
+}
+#cart_shopping .qtd_cart{
+    position: relative;
+    top:25px;
+    right: 12px;
+    font-size: 16px;
+    margin-left: 2px;
+    border: 1px solid #e91e63;
+    z-index: 1;
+    background-color: #e91e63;
+    padding: 3px;
+}
+.fa-cart-shopping{
+    margin: auto auto;
+    color: red;
+    font-size: 32px;
+    border: 1px solid #23232c;
+    padding: 9px;
 }
 /*Estilização do mapa*/
 #map{
