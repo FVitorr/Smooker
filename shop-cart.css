@@ -33,10 +33,17 @@
 }
 .cart-conteudo{
     margin-top: 20px;
-    display: flex;
-    align-items:center;
+   
     border: 1px solid black;
     padding: 16px;
+}
+.cart-conteudo-product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cart-conteudo-product img{
+    width: 52px;
 }
 .cart-side{
     margin-left: 20px;

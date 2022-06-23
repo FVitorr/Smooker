@@ -8,11 +8,21 @@ cart_render.innerHTML += `
             <p><input type="radio" name="product-select" value = "1">Selecionar Tudo</p>
         </div>
         <div class = "cart-conteudo">
-            <input type="radio" name="product-select" value = "2">
-            <img src ="logo.png">
-            <div>
-                <p>Nome Produto<p>
-                <h6>R$ 00,00</h6>
+            <div class="cart-conteudo-product">
+                <input type="radio" name="product-select" value = "2">
+                <img src ="logo.png">
+                <div>
+                    <p>Nome Produto<p>
+                    <h6>R$ 00,00</h6>
+                </div>
+            </div>
+            <div class="cart-conteudo-product">
+                <input type="radio" name="product-select" value = "3">
+                <img src ="logo.png">
+                <div>
+                    <p>Nome Produto<p>
+                    <h6>R$ 00,00</h6>
+                </div>
             </div>
         </div>
     </div>
