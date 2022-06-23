@@ -367,22 +367,26 @@ nav li {
     justify-content: center;
     padding: 4px;
 }
+.qtd_cart{
+    color: whitesmoke;
+}
 #cart_shopping .qtd_cart{
     position: relative;
     top:25px;
     right: 12px;
     font-size: 16px;
     margin-left: 2px;
-    border: 1px solid #e91e63;
+    border: 1px solid #23232c;
     z-index: 1;
-    background-color: #e91e63;
+    background-color: #23232c;
     padding: 3px;
 }
 .fa-cart-shopping{
     margin: auto auto;
-    color: red;
+    color: whitesmoke;
     font-size: 32px;
     border: 1px solid #23232c;
+    background-color:#23232c;
     padding: 9px;
 }
 /*Estilização do mapa*/

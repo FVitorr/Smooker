@@ -230,7 +230,7 @@ let qtd_product_cart = new Array ();
 for (let j = 0; j < bd.length; j++){
     qtd_product_cart[j] = 0;
 }
- 
+
 /*list_cart[0] = [key:qtd]
 /* Atualiza a lista de produtos e retorna a chave do produto*/
 function products_key(){
@@ -241,10 +241,15 @@ function products_key(){
             list_cart[cont]= bd[key];
             qtd_product_cart[key] = parseInt((qtd_product_cart[key])) + 1;
             let upg = upg_qtd_cart(qtd_product_cart);
-            //list_cart.length quantide de produtos no carinho
             cont++;
             for (let j = 0; j < upg.length; j++){
                 console.log(upg[j]);
+            }
+            //quantidade de produto no carinho
+            var spam = document.getElementsByClassName("qtd_cart");
+            //atualizar tags de carrinho quantidade
+            for (var j = 0; j < spam.length;j++){
+                spam[j].innerHTML = "(" +  qtdIncart(upg) + ")";
             }
             console.log("carrinho qtd: " + upg.length);
         })
@@ -269,5 +274,12 @@ function upg_qtd_cart(qtd_product_cart){
     return qtd_product_;
 }
 
-
+function qtdIncart(upg){
+    let soma = 0;
+    for (let j = 0; j < upg.length; j++){
+        soma = soma + upg[j][1];
+        console.log(soma);
+    }
+    return soma;
+}
 
