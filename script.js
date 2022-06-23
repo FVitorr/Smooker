@@ -195,7 +195,6 @@ search.addEventListener("keyup", function (e) {
                 console.log(bd[i])
                 /*Separar pagina com a definição do search*/
                 newPage[index] = bd[i];
-                //limpar tela
                 index++;
             }
         }
@@ -233,6 +232,7 @@ for (let j = 0; j < bd.length; j++){
 
 /*list_cart[0] = [key:qtd]
 /* Atualiza a lista de produtos e retorna a chave do produto*/
+let cont_upg = 0
 function products_key(){
     var products = document.getElementsByClassName("btn");
     for (i = 0; i < products.length; i++){
@@ -251,7 +251,10 @@ function products_key(){
             for (var j = 0; j < spam.length;j++){
                 spam[j].innerHTML = "(" +  qtdIncart(upg) + ")";
             }
-            console.log("carrinho qtd: " + upg.length);
+            //adc produtos a div cart
+            upg_div_cart(upg[cont_upg]);
+            //console.log("carrinho qtd: " + upg.length);
+            cont_upg++;
         })
     } 
 }
