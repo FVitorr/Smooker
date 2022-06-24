@@ -104,6 +104,9 @@ function remove_product(key){
                 upg_Valuetotal(upg);
                 //atualizar span qtd item no carrinho
                 var spam = document.getElementsByClassName("qtd_cart");
+                
+                let cont_ = document.getElementsByClassName("product"+ key);
+                cont_[0].innerHTML = upg[i][1];
                 //atualizar tags de carrinho quantidade
                 for (var j = 0; j < spam.length; j++) {
                     spam[j].innerHTML = "(" + qtdIncart(upg) + ")";
