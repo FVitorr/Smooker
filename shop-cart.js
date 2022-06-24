@@ -10,7 +10,7 @@ cart_render.innerHTML += `
                 <p><input type="radio" name="product-select" value = "1">Selecionar Tudo</p>
             </div>
             <div class = "cart-conteudo">
-
+                <h2 class = "cart-conteudo-erro">Nenhum produto no carrinho</h2>
             </div>
         </div>
         <div class = "cart-side">
@@ -39,18 +39,19 @@ cart_render.innerHTML += `
 document.body.insertBefore(cart_render, document.getElementById("banner-emphasis"));
 
 function upg_div_cart(key,upg){
+    let msg_body_cart = document.getElementsByClassName("cart-conteudo-erro");
+    msg_body_cart[0].style.display = 'none';
     let cart_conteudo = document.getElementsByClassName("cart-conteudo");
     let cart_Cproduct = createDiv("class","cart-conteudo-product");
     cart_Cproduct.setAttribute("id","product" + key);
     let product_info = bd[key];
     for (let i = 0; i < upg.length; i++){
-        console.log('Key Entry Div' + upg[i][0]);
+        console.log('Key Entry Div' + upg);
         if (key == upg[i][0]){
             if (upg[i][1] > 1){ //elemento ja adcionado spam sofre incremento
                 let nameDiv = "product"+ key
                 let spam = document.getElementsByClassName(nameDiv);
-                console.log(spam)
-                spam[0].innerHTML = upg[key][1];
+                spam[0].innerHTML = upg[i][1];
             }else{
                 cart_Cproduct.innerHTML += `
                 <img src =`+ product_info[0] + `>
@@ -114,6 +115,10 @@ function remove_product(key){
                 console.log(qtd_product_cart[key]);
             }
         }
+    }
+    if(document.getElementsByClassName("cart-conteudo-product").length == 0){
+        let msg_body_cart = document.getElementsByClassName("cart-conteudo-erro");
+        msg_body_cart[0].style.display = 'block';
     }
     console.log("Remove");
     return upg;
