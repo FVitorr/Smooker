@@ -10,19 +10,21 @@
     display: flex;
     justify-content: center;
     border: 1px solid black;
-    background-color: blue;
+    background-color: #23232c;
 }
 .cart-main{
     margin-top: 20px;
     height: 400px;
 }
 .cart-header{
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 16px;
+    color: white;
 }
 .cart-header h2{
     font-weight: 600;
     letter-spacing: 0.5px;
+    color: white;
 }
 .cart-header input{
     margin-right: 5px;
@@ -34,8 +36,9 @@
 .cart-conteudo{
     margin-top: 20px;
    
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 16px;
+    color: white;
 }
 .cart-conteudo-product{
     display: flex;
@@ -52,25 +55,43 @@
     height: 320px;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 .cart-summary{
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: center;
 }
 .cart-icon{
     padding: 16px;
     height: 320px;
     margin-top: 20px;
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: center;
 }
 .cart-icon-header{
     padding-bottom: 5px;
     border-bottom: 1px solid;
     margin-bottom: 10px;
+    color: white;
 }
+.spam_total{
+    color: black;
+    margin-left: 2px;
+}
+/*Estilização dos ícones na parte do pagamento*/
 .fa-user-shield{
-    color:black;
+    color: cyan;
     padding-right: 5px;
+}
+.fa-cc-mastercard{
+    color: orange;
+}
+
+.fa-cc-visa{
+    color: #1E90FF;
+}
+
+.fa-pix{
+    color: #7FFFD4;
 }

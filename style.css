@@ -468,3 +468,36 @@ nav li {
     color:#ffffff; 
     padding-left: 10px;
 }
+/*Estilização das redes sociais na parte inferior direita*/
+.fa-facebook{
+    color: #1E90FF;
+}
+
+.fa-twitter{
+    color: #87CEFA;
+}
+
+.fa-instagram{
+    color: #FF69B4;
+}
+
+.fa-youtube{
+    color:red;
+}
+/*Estilização dos ícones superiores */
+.fa-location-dot{
+    color: red;
+}
+.fa-magnifying-glass{
+    color: #00BFFF;
+}
+
+.fa-user{
+    color: cyan;
+}
+
+.fa-basket-shopping{
+    color: yellow;
+}
+
+
