@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="shop-cart.css">
     <script src="https://kit.fontawesome.com/d881c2b784.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -28,7 +31,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </li>
-                <li class="cart_">
+                <li class="cart_" onclick="open_cart()">
                     <a href="#" class="header-icon"><i class="fa-solid fa-basket-shopping"></i></a>
                     <span class="qtd_cart"></span>
                 </li>
@@ -91,7 +94,7 @@
 
     </div>
 
-    <div id ="cart_shopping">
+    <div id ="cart_shopping" onclick="open_cart();">
         <i class="fa-solid fa-cart-shopping"></i>
         <span><span class="qtd_cart">(0)</span></span>
     </div>
@@ -145,6 +148,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="search.js"></script>
     <script src="shop-cart.js"></script>
 </body>
 
