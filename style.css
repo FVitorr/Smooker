@@ -129,10 +129,11 @@ nav li {
     border-color: #bbbbbb;
 }
 #page_erro {
-    margin-top: 10px;
+    margin-top: 100px;
     font-size: larger;
     font-weight: 700;
     color: #8d8989fb;
+    margin-bottom: 100px;
 }
 #page_erro i{
     color: #23232e;

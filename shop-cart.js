@@ -123,17 +123,33 @@ function remove_product(key) {
 let active_ = 0; // variavel de controle para o cart_render
 let div_cart = document.getElementById("cart_render");
 let div_product = document.getElementById("banner-emphasis");
+let div_info = document.getElementsByClassName("info");
 div_cart.style.display = "none"
 div_product.style.display = "block"
-function open_cart() {
-    if (active_ == 0) {
+function open_cart(reverse  = false) {
+    if (active_ == 0 && !reverse) {
         div_cart.style.display = "block"
+        login_register.style.display="none";
         div_product.style.display = "none"
+        try{
+            div_info[0].style.display="none"
+            div_info[1].style.display="none"
+        }catch{
+
+        }
         active_ = 1;
     } else {
         div_cart.style.display = "none"
+        //login_register.style.display="none";
         div_product.style.display = "block"
+        try{
+            div_info[0].style.display="block"
+            div_info[1].style.display="block"
+        }catch{
+            
+        }
         active_ = 0;
+        
     }
     console.log(active_);
 }

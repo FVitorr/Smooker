@@ -59,3 +59,14 @@ login_register.innerHTML += `
     </div>
   </div>
 </form>`
+
+login_register.style.display="none";
+let active_l = 0 
+function active_loginRegister(){
+    if (active_l == 0){
+        login_register.style.display="block";
+        div_product.style.display = "none"
+        active_l = 1;
+    }
+}
+    

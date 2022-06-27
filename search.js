@@ -12,22 +12,22 @@ function infoSeachDiv(Search_entry = 'nome_product',qtd_product = 0){
     var info_search_div = createDiv("id","info-search");
     if (qtd_product > 1){
         info_search_div.innerHTML += `
-        <div class="info-search">
+        <div class="info-search info">
             <div class= "header_search">
                 <h2 id="name_search">Busca: "<spam>` + Search_entry + `</spam>"</h2>
                 <p>Quantidade: <spam>`+ qtd_product + ` produtos</spam><p>
             </div>
 
         </div>
-        <div class="info-button">
+        <div class="info-button info">
             <button  onclick="return_();"><i class="fa-solid fa-backward"></i>  Voltar</button>
         </div>`
     }else {
-        info_search_div.innerHTML += `<div class="info-search">
-            <h2 id="name_search">Busca: "<spam>` + Search_entry + `</spam>"</h2>
+        info_search_div.innerHTML += `<div class="info-search info">
+            <h2 id="name_search info">Busca: "<spam>` + Search_entry + `</spam>"</h2>
             <p id= "page_erro"> <i class="fa-solid fa-face-meh"></i> Produto não encontrado<p>
         </div>
-        <div class="info-button">
+        <div class="info-button info">
             <button onclick="return_();"><i class="fa-solid fa-backward"></i>  Voltar</button>
         </div>`
     }
@@ -76,6 +76,7 @@ search.addEventListener("keyup", function (e) {
     let key = e.which || e.keyCode;
     if (key == 13) {
         //ocult_display("banner-emphasis");
+        open_cart(reverse  = false);
         let container_ = document.getElementById("banner-emphasis").innerHTML ='';
         let t = this.value;
         let r = new RegExp(t.toLowerCase(), "g");
