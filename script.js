@@ -202,7 +202,7 @@ function products_key() {
     }
 }
 
-products_key();
+products_key() ;
 //obter chave dos produtos adc
 /*
 function getkey(qtd_product_cart) {

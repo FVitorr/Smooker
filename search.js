@@ -7,6 +7,7 @@ let father_ = document.createElement("div");
 father_.setAttribute("id", "banner-search")
 
 
+
 function infoSeachDiv(Search_entry = 'nome_product',qtd_product = 0){
     var info_search_div = createDiv("id","info-search");
     if (qtd_product > 1){
@@ -47,6 +48,7 @@ search.addEventListener("keyup", function (e) {
     let newPage = new Array;
     //quando um caracter é informado no search a div banner-search tera seu conteudo limpo
     if (qtd_search >= 1) {
+        /*
         let container_ = document.getElementById("banner-search").childNodes;
         for (var i = 0; i < container_.length;i++){
             console.log(container_[i]);
@@ -55,7 +57,8 @@ search.addEventListener("keyup", function (e) {
             }catch{
                 console.log("Elemento não existe");
             }
-        }
+        }*/
+        let container_ 
     }
     try{
         let info = document.getElementById("info-search");
@@ -69,10 +72,11 @@ search.addEventListener("keyup", function (e) {
         console.log("Not Found div info-search");
     }
 
-    active_display("banner-emphasis");
+    //active_display("banner-emphasis");
     let key = e.which || e.keyCode;
     if (key == 13) {
-        ocult_display("banner-emphasis");
+        //ocult_display("banner-emphasis");
+        let container_ = document.getElementById("banner-emphasis").innerHTML ='';
         let t = this.value;
         let r = new RegExp(t.toLowerCase(), "g");
         let index = 0;
@@ -103,28 +107,41 @@ search.addEventListener("keyup", function (e) {
             index_++;
         }
         if (qtd_prd > 1) {
+            father_ = document.getElementById("banner-emphasis");
             father_.appendChild(div_conteine);
         }
         qtd_search++;
         search.value = '';
-        document.body.insertBefore(father_, document.getElementById("banner-emphasis"));
+        //document.body.insertBefore(father_, document.getElementById("banner-emphasis"));
     }
     var products = document.getElementsByClassName("btn");
     products_key(products);
 })
 
 function return_(){
-    active_display("banner-emphasis");
-    ocult_display("banner-search");
+    document.getElementById("banner-emphasis").innerHTML =''
     try{
-        let info = document.getElementById("info-search");
-        info.remove();  
-        let button = document.getElementsByClassName("info-button");
-        for (var i = 0; i < info.length;i++){
-            info[i].remove();
-            button[i].remove();
-        }
+        document.getElementById("info-search").innerHTML =''
+        document.getElementsByClassName("info-button").innerHTML =''
     }catch{
         console.log("Not Found div info-search");
     }
+    /*renderizar produtos de destaque*/
+    let qtd_product = 16;
+    let index = 0;
+    let div_conteiner = createDiv('class', "container");
+    let father = document.getElementById("banner-emphasis")
+    for (let i = 0; i < qtd_product; i++) {
+        if (index == 4 || index == 8) {
+            father.appendChild(div_conteiner);
+            div_conteiner = createDiv('class', "container");
+            index = 0;
+        }
+        let product_emphasis = createProdut(bd[i][0], bd[i][1], bd[i][2], bd[i][3], bd[i][4], bd[i][5])
+        div_conteiner.appendChild(product_emphasis);
+        index++;
+    }
+
+    father.appendChild(div_conteiner);
+    products_key() ;
 }
