@@ -246,3 +246,5 @@ function qtdIncart() {
 function test(){
     console.log("Test Active");
 }
+
+

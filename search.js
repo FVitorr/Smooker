@@ -76,7 +76,7 @@ search.addEventListener("keyup", function (e) {
     let key = e.which || e.keyCode;
     if (key == 13) {
         //ocult_display("banner-emphasis");
-        open_cart(reverse  = false);
+        open_cart(reverse  = true);
         let container_ = document.getElementById("banner-emphasis").innerHTML ='';
         let t = this.value;
         let r = new RegExp(t.toLowerCase(), "g");

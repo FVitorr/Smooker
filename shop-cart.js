@@ -131,6 +131,7 @@ function open_cart(reverse  = false) {
         div_cart.style.display = "block"
         login_register.style.display="none";
         div_product.style.display = "none"
+        return_main("cart_render")
         try{
             div_info[0].style.display="none"
             div_info[1].style.display="none"

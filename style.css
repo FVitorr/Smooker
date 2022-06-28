@@ -451,6 +451,24 @@ nav li {
     background-color:#23232c;
     padding: 9px;
 }
+#return-div{
+    margin-left: 10%;
+    margin-top: 20px;
+    width: 120px;
+}
+#return-div button{
+    padding: 5px 3px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #23232c;
+    border-color: #23232c;
+    transition: all 0.5s;
+}
+#return-div button:hover{
+    color: #23232c;
+    background-color:#fff ;
+    border-color: #fff;
+}
 /*Estilização do mapa*/
 #map{
     height: 310px;
